@@ -1,0 +1,103 @@
+.testimonial{
+  padding: 80px 0;
+  position: relative;
+}
+.testimonial .titlemain{
+  text-align: center;
+  max-width: 645px;
+  margin: auto; 
+  margin-bottom: 80px;
+}
+.testimonial .titlemain h2{
+  color: #1f2278;
+  font-size: 45px;
+  font-weight: 700;
+}
+.testimonial .thumb-wraper{
+  position: relative;
+  display: inline-block;
+}
+.testimonial .thumb-wraper ul li{
+  position: absolute;
+}
+.testimonial .thumb-wraper ul li a{
+  border-radius: 50%;
+  box-shadow: 0 10px 60px 0 rgba(31,34,120,.1);
+  display: block;
+  height: 65px;
+  overflow: hidden;
+  position: relative;
+  transition: all .5s;
+  width: 65px;
+}
+.testimonial .thumb-wraper ul li img{
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+}
+.testimonial .thumb-wraper ul li:nth-child(1){
+  left: 20px;
+  top: 100px;
+}
+.testimonial .thumb-wraper ul li:nth-child(2){
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.testimonial .thumb-wraper ul li:nth-child(3){
+  right: 20px;
+  top: 100px;
+}
+.testimonial .thumb-wraper ul li:nth-child(4){
+  bottom: 110px;
+  right: 30px;
+}
+@media (max-width: 470px) {
+  .testimonial .thumb-wraper ul li:nth-child(4){
+    bottom: 72px;
+    right: 30px;
+  }
+}
+.testimonial .thumb-wraper ul li:nth-child(5){
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.testimonial .thumb-wraper ul li:nth-child(6){
+  bottom: 110px;
+  left: 30px;
+}
+@media (max-width: 470px) {
+  .testimonial .thumb-wraper ul li:nth-child(6){
+    bottom: 72px;
+    right: 30px;
+  }
+}
+.testimonial .slick-prev, .slick-next{
+  top: 98% !important;
+} 
+.testimonial .slick-prev:before, .slick-next:before{
+  font-size: 40px;
+  line-height: 2;
+  color: #c17850;
+}
+.slick-next {
+  left: 22%;
+}
+.slick-prev{
+  left: 12%;
+}
+.testimonial .img01{
+  position: absolute;
+  left: 93%;
+  width: 4%;
+  top: 77%;
+}
+.testimonial .img02{
+  position: absolute;
+  left: 5%;
+  width: 7%;
+  top: 33%;
+}

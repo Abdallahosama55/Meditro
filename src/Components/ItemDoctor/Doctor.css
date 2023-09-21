@@ -1,0 +1,12 @@
+.ourdoctor{
+  padding: 100px 0;
+}
+.ourdoctor .ourdomaintitle{
+  text-align: center;
+  margin-bottom: 70px;
+}
+.ourdoctor .ourdomaintitle h2{
+  color: #1f2278;
+  font-size: 40px;
+  font-weight: 700;
+}

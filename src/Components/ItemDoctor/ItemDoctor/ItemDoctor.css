@@ -1,0 +1,90 @@
+.itemdoctor{
+  background-color: #fff;
+  border: 2px solid rgba(86,90,207,.2);
+  border-radius: 20px;
+  padding: 35px 40px 30px;
+  position: relative;
+  text-align: center;
+  transition: all .5s;
+  z-index: 1;
+  min-height: 373px;
+}
+.itemdoctor:hover{
+  border-color: #fff;
+  box-shadow: 0 10px 50px 0 rgba(0,2,72,.1);
+  z-index: 9;
+}
+.itemdoctor .imgdoctor img{
+  border-style: none;
+  -webkit-mask-image: url('../../../assets/Images/borderperson.png');
+  mask-image: url('../../../assets/Images/borderperson.png');
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  position: relative;
+  height: 120px;
+}
+.itemdoctor .imgdoctor {
+  position: relative;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+.itemdoctor .imgdoctor::before{
+  position: absolute;
+  content: "";
+  background-image: url('../../../assets/Images/beforeperson.png');
+  background-size: 100%;
+  width: 53%;
+}
+.itemdoctor .imgdoctor::after{
+  position: absolute;
+  content: "";
+  background-image: url('../../../assets/Images/afterperson.png');
+  background-size: 100%;
+  width: 67%;
+}
+.itemdoctor .imgdoctor::before,
+.itemdoctor .imgdoctor::after{
+  background-position: 50%;
+  background-repeat: no-repeat;
+  content: "";
+  height: 100%;
+  left: 50%;
+  opacity: .2;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  transition: all .5s;
+  z-index: -1;
+}
+.itemdoctor:hover .imgdoctor::before,
+.itemdoctor:hover .imgdoctor::after{
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .itemdoctor .imgdoctor::before,
+  .itemdoctor .imgdoctor::after{
+    display: none;
+  }
+}
+.itemdoctor h2{
+  color: #1f2278;
+  font-size: 24px;
+  font-weight: 700;
+} 
+.itemdoctor h5{
+  color: var(--color-orange);
+  margin-bottom: 15px;
+}
+.itemdoctor .social a{
+  background-color: var(--color-btn);
+  fill: #fff;
+}
+.itemdoctor .social a:hover{
+  background-color: var(--color-orange);
+  fill: #fff;
+}

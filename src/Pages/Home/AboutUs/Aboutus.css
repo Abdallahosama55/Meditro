@@ -1,0 +1,167 @@
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.row{
+  display: flex;
+  grid-row-gap: 20px;
+}
+.about{
+  padding-bottom: 70px;
+  padding-top: 100px;
+  position: relative;
+}
+.about .box-img ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+.about .box-img ul li{
+  display: inline-flex;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.about .box-img ul li:first-child, .about .box-img ul li:nth-child(3){
+  width: 45%;
+}
+.about .box-img ul li:nth-child(2), .about .box-img ul li:nth-child(4){
+  width: 55%;
+}
+.about .box-img ul li .imgabout01{
+  border-radius: 0 60px 60px;
+  margin-left: auto;
+  margin-top: 52px;
+}
+.about .box-img ul li .imgabout02{
+  border-radius: 60px 0 60px 60px;
+  margin-right: auto;
+  margin-top: auto;
+}
+.about .box-img ul li .imgabout03{
+  border-radius: 60px 60px 60px 0;
+  margin-left: auto;
+}
+.about .box-img ul li .imgabout04{
+  border-radius: 60px 60px 0 60px;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+.about .boxtext h2{
+  color: #1f2278;
+  font-weight: 700;
+}
+.about .boxtext p{
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 5px;
+  color: #444;
+  margin-bottom: 35px;
+}
+.about .boxtext .icons .box{
+  border: 1px solid #b2f0fb;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 30px 0 rgba(31,34,120,.08);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 20px 10px 15px;
+  z-index: 1;
+  position: relative;
+}
+.about .boxtext .icons .box::before{
+  border-radius: 50%;
+  content: "";
+  height: 85px;
+  left: -12px;
+  position: absolute;
+  top: -8px;
+  width: 85px;
+  z-index: -1;
+  background-color: #fff0f0;
+}
+.about .boxtext .icons .box:hover svg{
+  animation: shake 0.2s ease-in-out 2;
+}
+.about .boxtext .icons svg{
+  height: 40px;
+  width: 40px;
+  margin-right: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+.about .boxtext .icons span{
+  color: #1f2278;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.about button{
+  background-color: #565acf;
+  color: #fff;
+  margin-top: 20px;
+  padding: 7px 15px;
+  font-weight: 500;
+}
+.about button:hover{
+  background-color: #2d31b5;
+  color: #fff;
+}
+.about .img01{
+  position: absolute;
+  top: 24%;
+  left: 82%;
+  width: 70px;
+  z-index: -2;
+  animation: rotate 25s linear infinite; 
+}
+.about .img02{
+  position: absolute;
+  left: 89%;
+  top: 73%;
+  width: 70px;
+  z-index: -2;
+  width: 100px;
+  animation: moveHorizontal 7s linear infinite;
+}
+
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); 
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(0); 
+  }
+  25%{
+    transform: translateX(-12px); 
+  }
+  50%{
+    transform: translateX(0); 
+  }
+  75% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

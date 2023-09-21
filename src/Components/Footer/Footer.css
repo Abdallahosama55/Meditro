@@ -1,0 +1,230 @@
+.footer .row{
+  display: flex;
+  grid-row-gap: 20px;
+}
+ul{
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.ml-50{
+  margin-left: 50px;
+}
+@media (max-width: 991px) {
+  .ml-50{
+    margin-left: 0;
+  }
+}
+.footer{
+  background-image: url('../../assets/Images/imgFooter.jpg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 15px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding-top: 150px;
+}
+.footer::after{
+  background-image: url('../../assets/Images/waveFooter.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.footer .box01 p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 30px 0;
+  color: #444;
+}
+.footer .icon-text{
+  display: flex !important;
+  align-items: center !important;
+}
+@media (max-width: 767px) {
+  .footer .icon-text{
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+}
+.footer .icon-text .icon-container  svg{
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+  top: 45%;
+  left: 45%;
+}
+.icon-container {
+  position: relative; 
+  width: 40px; 
+  height: 40px; 
+  margin-right: 35px;
+}
+.icon-container::before {
+  content: ""; 
+  position: absolute; 
+  background-color: var(--color-orange);
+  border-radius: 30px 30px 0 30px;
+  color: #fff;
+  font-size: 24px;
+  height: 58px;
+  line-height: 58px;
+  margin-right: 15px;
+  text-align: center;
+  width: 58px;
+  z-index: -1;
+}
+.footer .textContact h2{
+  color: var(--color-orange);
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.footer .textContact span{
+  font-size: 20px;
+  color: #1f2278;
+  line-height: 1.3;
+  font-weight: 700;
+}
+.footer .box h3{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #1f2278;
+  font-family: 'Tajawal', sans-serif ;
+}
+.footer .box h3::before{
+  background-image: url('../../assets/Images/textfooter.png');
+  background-repeat: no-repeat;
+  bottom: 0;
+  content: "";
+  height: 7px;
+  left: 0;
+  position: absolute;
+  width: 85px;
+}
+@media (max-width: 767px) {
+  .footer .box h3::before{
+    left: 42%;
+  }
+}
+.footer .box ul li {
+  color: #444;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  padding: 6px 0;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s ease;
+}
+.footer .box ul li:hover{
+  color: #565acf;
+  transition: 0.3s ease;
+}
+.footer form input{
+  border-radius: 10px;
+  box-shadow: 0 10px 60px 0 rgba(31,34,120,.1);
+  margin-bottom: 20px;
+  outline: none;
+  background: #fff;
+  border: 1px solid transparent;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 25px;
+  transition: all .3s ease-in-out;
+  width: 100%;
+}
+.footer form button{
+  background-color: #f17732;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.footer form button:hover{
+  background-color: var(--color-orange-hover);
+  transition: 0.3s ease-in-out;
+  color: #f1eded;
+}
+.footer .social-media ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer .Copyright p{
+  text-align: center;
+  color: #444;
+  border-top: 1px solid #d4d5f1;
+  padding: 20px 0;
+  margin: 0;
+  margin-top: 40px;
+  font-weight: 500;
+}
+.footer .img-bg .img01 {
+  position: absolute;
+  left: 89%;
+  top: 73%;
+  width: 70px;
+  z-index: -2;
+  width: 100px;
+  animation: moveHorizontal 7s linear infinite; 
+}
+.footer .img-bg .img0101{
+  top: 14%;
+  left: 9%;
+  z-index: 1;
+}
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(0); 
+  }
+  25%{
+    transform: translateX(-12px); 
+  }
+  50%{
+    transform: translateX(0); 
+  }
+  75% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.footer .img-bg .img02 {
+  position: absolute;
+  left: 7%;
+  top: 65%;
+  width: 70px;
+  z-index: -2;
+}
+.footer .img-bg .img03 {
+  position: absolute;
+  left: 89%;
+  top: 34%;
+  width: 70px;
+  z-index: -2;
+  animation: rotate 25s linear infinite; 
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); 
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}

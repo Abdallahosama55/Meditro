@@ -1,0 +1,14 @@
+.social a{
+  background-color: #fff;
+  fill: #565acf;
+  border-radius: 6px;
+  margin-right: 6px;
+  box-shadow: 0 10px 40px 0 rgba(31,34,120,.1);
+  line-height: 40px;
+  transition: all .5s;
+  padding: 4px 7px;
+}
+.social a:hover{
+  background-color: var(--color-orange);
+  fill: #fff;
+}

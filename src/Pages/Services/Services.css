@@ -1,0 +1,10 @@
+.secone{
+  padding: 100px 0;
+}
+.secone .boxitem button:hover{
+  background-color: var(--color-btn);
+  color: #fff;
+}
+.secone .boxitem {
+  margin: 0;
+}

@@ -1,0 +1,22 @@
+.scroll-button {
+  position: fixed;
+  bottom: 50px;
+  right: -60px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.scroll-button.visible {
+  right: 20px;
+}
+.btnscroll{
+  outline: none;
+  background-color: var(--color-btn);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 6px;
+}

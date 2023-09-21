@@ -1,0 +1,28 @@
+.mainBtn{
+  background-color: var(--color-btn);
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 7px !important;
+  outline: none;
+  border: none;
+  font-size: 15px !important;
+  text-transform: uppercase !important; 
+  transition: 0.3s ease-in-out;
+}
+.mainBtn:hover{
+  background-color: rgb(66, 66, 175);
+}
+.mainBtn .span-arr{
+  background: #fff;
+  border-radius: inherit;
+  color: var(--color-basic);
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin: 0px -27px 0px 15px;
+  width: 40px;
+}
+.mainBtn .span-arr svg{
+  vertical-align: middle;
+}

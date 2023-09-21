@@ -1,0 +1,105 @@
+.secform .row{
+  justify-content: space-evenly;
+}
+
+.secform .cous-form{
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 10px 60px 0 rgba(31,34,120,.1);
+  padding: 35px 35px;
+  position: relative;
+  text-align: center;
+  margin: 70px 0;
+}
+.secform .boxform form{
+  padding: 30px 0 0 0;
+}
+.secform .boxform form input,
+.secform .boxform form select,
+.secform .boxform form textarea{
+  border: 1px solid rgba(86,90,207,.3);
+  border-radius: 8px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 15px;
+  outline: none;
+  padding: 15px 20px;
+  transition: 0.3s ease;
+  background-color: var(--colo-white);
+}
+.secform .boxform form input:hover,
+.secform .boxform form select:hover{
+  border-color: #565acf;
+  transition: 0.3s ease;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.secform .btnsubmit{
+  background-color: #f17732;
+  color: #fff;
+  margin-top: 15px;
+  font-size: 21px;
+  width: 100%;
+} 
+.secform .btnsubmit:hover{
+  background-color: var(--color-orange-hover);
+  color: #fff;
+} 
+.secform .overlay{
+  position: relative;
+  background-image: url('../../assets/Images/about01.jpg');
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  padding: 40px 40px 30px;
+}
+.secform .overlay::before{
+  position: absolute;
+  content: '';
+  background-color: #565acf;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: .9;
+}
+.secform .info{
+  z-index: 1;
+  text-align: left;
+  top: 37px;
+  padding-right: 100px;
+}
+@media (max-width: 1115px) {
+  .secform .info {
+    padding: 0;
+  }
+}
+.secform .info h2{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.secform .info .cont{
+  margin-bottom: 30px;
+}
+.secform .info .cont h6{
+  border-bottom: 2px solid hsla(0,0%,100%,.2);
+  padding-bottom: 10px;
+}
+.contactus .info .cont svg{
+  /* padding-right: 10px; */
+}
+.contitem{
+  padding-bottom: 100px;
+}

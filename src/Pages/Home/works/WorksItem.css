@@ -1,0 +1,115 @@
+.works{
+  padding-bottom: 70px;
+  background-image: url('../../../assets/Images/bgworks.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  position: relative;
+}
+.works .container{
+  padding: 0 50px !important;
+}
+.works .main-title{
+  text-align: center;
+  padding: 20px 0 70px 0;
+}
+.works .main-title h2{
+  color: #1f2278;
+  font-size: 40px;
+  font-weight: 600;
+}
+.works .box{
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px 0 rgba(31,34,120,.1);
+  overflow: hidden;
+  padding: 40px 40px;
+  position: relative;
+  transition: all .5s ease;
+  z-index: 1;
+}
+.works .box::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: var(--color-orange);
+  color: #fff !important;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .5s ease;
+}
+.works .box:hover::before{
+  height: 100% ;
+  transition: all .5s ease;
+}
+.works .box:hover h3,
+.works .box:hover p{
+  color: rgb(255, 255, 255) !important; 
+  transition: all .5s ease;
+}
+.works .box:hover .mainBtn{
+  background-color: var(--color-white);
+  border: 1px solid #fff;
+  transition: all .5s ease;
+}
+.works .box:hover .mainBtn .span-arr{
+  background-color: var(--color-orange);
+  transition: all .5s ease;
+}
+.works .box:hover .mainBtn .span-arr svg{
+  color: var(--color-white);
+  transition: all .5s ease;
+}
+.works .box:hover{
+  margin-top: -20px;
+}
+.works .box .number{
+  -webkit-text-stroke: 2px #f17732;
+  color: transparent;
+  font-size: 80px;
+  font-weight: revert;
+  line-height: 80px;
+  margin-bottom: 30px;
+  text-shadow: 0 10px 0 #ffe3d3;
+  transition: all .5s;
+  font-family: monospace;
+}
+.works .box h3{
+  color: var(--color-orange);
+  font-weight: 600;
+  font-size: 22px;
+}
+.works .box p{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 30px;
+  color: var(--color-desc);
+}
+.works .mainBtn{
+  background-color: #e1e2f6;
+  border: 2px solid #e1e2f6;
+  color: #565acf;
+  text-transform: lowercase !important; 
+  font-weight: 500;
+  font-size: 18px !important;
+  margin-bottom: 5px;
+}
+.works .img01{
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  width: 70px;
+  z-index: -2;
+  animation: rotate 25s linear infinite;
+}
+.works .img02{
+  position: absolute;
+  top: 15%;
+  left: 90%;
+  width: 70px;
+  z-index: -2;
+  animation: rotate 25s linear infinite;
+}

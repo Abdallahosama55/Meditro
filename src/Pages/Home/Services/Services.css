@@ -1,0 +1,62 @@
+.Services{
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+.Services::before{
+  background-color: #565acf;
+  border-radius: 40px 0 0 40px;
+  content: "";
+  height: 80%;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 53%;
+  z-index: -1;
+}
+@media (max-width: 991px) {
+  .Services::before{
+    width: 100%;
+  }
+  .Services .info h6,
+  .Services .info h2,
+  .Services .info p{
+    color: #fff !important;
+  }
+}
+.Services .info h2{
+  color: #1f2278;
+  font-weight: 700;
+  font-size: 36px;
+}
+.Services .info p{
+  color: var(--color-desc);
+}
+.Services .info button{
+  background-color: var(--color-orange);
+  color: #fff;
+  margin-top: 15px;
+  font-size: 18px;
+  padding: 8px 17px;
+}
+.Services .info button:hover{
+  background-color: var(--color-orange-hover);
+  color: #fff;
+}
+.Services .slider-container{
+  overflow: hidden;
+  width: 953px;
+}
+.Services .img01{
+  position: absolute;
+  left: 4%;
+  width: 4%;
+  top: 11%;
+  opacity: 0.4;
+}
+.Services .img02{
+  position: absolute;
+  left: 45%;
+  width: 5%;
+  top: 87%;
+}

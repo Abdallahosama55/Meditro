@@ -1,0 +1,27 @@
+.contitem .box{
+  background-color: #fff;
+  border: 1px solid #565acf;
+  border-radius: 8px;
+  box-shadow: 0 5px 30px 0 rgba(31,34,120,.08);
+  overflow: hidden;
+  padding: 45px 35px 35px;
+  z-index: 1;
+  border-color: #a4fcc4;
+  text-align: left;
+  min-height: 225px;
+}
+.contitem .box img{
+  height: 45px;
+  margin-bottom: 15px;
+}
+.contitem .box h2{
+  color: #1f2278;
+  font-size: 22px;
+  font-weight: 500;
+}
+.contitem .box p{
+  margin: 0;
+  max-width: 250px;
+  font-size: 16px;
+  color: var(--color-desc);
+}

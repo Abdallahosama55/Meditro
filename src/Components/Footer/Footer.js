@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='Copyright'>
-            <p>Copyright © 2023 Design & Developed by Abdallah Osama</p>
+            <p>Copyright © 2023 Design & Developed by <a href='https://doctor-code.net/'>Dr code</a></p>
           </div>
           <div className='img-bg'>
             <img src={Motion01} alt='img' className='img01'/>

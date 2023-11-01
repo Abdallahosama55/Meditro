@@ -31,8 +31,8 @@ const works = () => {
       <div className='works'>
         <div className='container'>
           <div className='main-title'>
-            <TitleBasic title='Working Process'/>
-            <h2>How we works?</h2>
+            <TitleBasic title='Get prices'/>
+            <h2>Get Price Plan</h2>
           </div>
           <div className='row'>
             {boxesData.map((box, index) => (

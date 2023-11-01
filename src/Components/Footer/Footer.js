@@ -28,7 +28,7 @@ const Footer = () => {
                   <div className="icon-container"><FontAwesomeIcon icon={faPhone} className='iconphone'/></div>
                   <div className='textContact'>
                     <h2>Contact Us</h2>
-                    <span>+01 123 456 7890</span>
+                    <span>+971 50 294 6184</span>
                   </div>
                 </div>
               </div>

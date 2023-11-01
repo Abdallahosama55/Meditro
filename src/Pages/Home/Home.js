@@ -11,7 +11,7 @@ import Footer from '../../Components/Footer/Footer'
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop '
 
 
-import ImgPerson from '../../assets/Images/person-header.png'
+import ImgPerson from '../../assets/Images/logo.png'
 import bgimg01 from '../../assets/Images/bg01.png'
 import bgimg02 from '../../assets/Images/bg02.png'
 import bgimg03 from '../../assets/Images/bg03.png'
@@ -31,7 +31,7 @@ const Home = () => {
               <a href='/#' className='btn-read'>Read More</a>
             </div>
             <div className='col-lg-5 col-md-6 col-sm-5'>
-              <img src={ImgPerson} alt='Img' className='img-fluid img-vertical-move'/>
+              <img src={ImgPerson} alt='Img' className='img-fluid img-vertical-move header-logo'/>
             </div>
           </div>
           <div className='img-bg'>

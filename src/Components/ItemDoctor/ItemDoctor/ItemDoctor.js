@@ -12,7 +12,16 @@ const ItemDoctor = (props) => {
         </div>
         <h2>{props.name}</h2>
         <h5>{props.job}</h5>
-        <Social />
+
+        <Social
+        
+        iconFacebook={props.iconFacebook}
+        iconLinkenin={props.iconLinkenin}
+        iconInstagram={props.iconInstagram}
+        iconTwitter={props.iconTwitter}
+        
+        
+        />
       </div>
     </>
   )

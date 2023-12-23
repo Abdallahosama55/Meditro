@@ -11,7 +11,7 @@
   transition: 0.3s ease-in-out;
 }
 .mainBtn:hover{
-  background-color: rgb(66, 66, 175);
+  background-color: #1a6e5d !important;
 }
 .mainBtn .span-arr{
   background: #fff;

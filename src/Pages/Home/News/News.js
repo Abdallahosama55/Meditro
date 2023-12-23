@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef,useState,useEffect} from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -14,12 +14,71 @@ import img03 from '../../../assets/Images/news01.jpg'
 import persong01 from '../../../assets/Images/person01.jfif'
 import persong02 from '../../../assets/Images/person02.jfif'
 import persong03 from '../../../assets/Images/person03.jfif'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchData } from '../../../Redux/ReduxPartners/apiSlice'
+
+
+import {PropagateLoader} from 'react-spinners'
 
 const News = () => {
+  const dispatch = useDispatch();
+  const headerRef = useRef(null); // Reference to the Meet with Our Team header
+
+  const { data, loading, error } = useSelector((state) => state.apipartners); // Replace 'apiCatgorey' with your slice name
+  const [page, setPage] = useState(1); // Initialize the current page
+  const [per_page, setperPage] = useState(6); // Initialize the current page
+
+  // Function to handle page change
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
+    
+    headerRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    // Fetch data based on the current page
+    const params = {
+      page: page.toString(), // Convert page to a string
+      per_page:per_page
+      // Other optional parameters
+    };
+    dispatch(fetchData(params));
+  }, [dispatch, page,per_page]);
+
+  if (loading) {
+    // Handle loading state
+    return <div>
+    
+    <div className=' d-flex justify-content-center align-items-center mt-5 py-5'>
+    
+    
+    <PropagateLoader color="#36d7b7"></PropagateLoader>
+    
+    
+    </div>
+    
+    
+    
+    </div>;
+  }
+
+  if (error) {
+    // Handle error state
+    return <div>{" "}</div>;
+  }
+if(data.length === 0){
+
+  return <div>{" "}</div>;
+}
+  // Render your data
 
   const settings = {
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 3.1,
     slidesToScroll: 1,
     swipeToSlide: true,
     responsive: [
@@ -40,69 +99,39 @@ const News = () => {
     ],
 };
   
-    const boxesData = [
-      {
-        image: img01,
-        imgperson: persong01,
-        nameperson: 'Joh Dev',
-        date: '21 July 2021',
-        title: 'Can you get a diflucan prescription online?',
-      },
-      {
-        image: img02,
-        imgperson: persong02,
-        nameperson: 'Red Has',
-        date: '25 July 2021',
-        title: 'In this hospital there are special surgeon',
-      },
-      {
-        image: img03,
-        imgperson: persong03,
-        nameperson: 'Dec Lia',
-        date: '10 July 2021',
-        title: 'Why Is Skin Surgeon Considered Underrated',
-      },
-      {
-        image: img01,
-        imgperson: persong01,
-        nameperson: 'Joh Dev',
-        date: '21 July 2021',
-        title: 'Can you get a diflucan prescription online?',
-      },
-      {
-        image: img02,
-        imgperson: persong02,
-        nameperson: 'Red Has',
-        date: '25 July 2021',
-        title: 'In this hospital there are special surgeon',
-      },
-      {
-        image: img03,
-        imgperson: persong03,
-        nameperson: 'Dec Lia',
-        date: '10 July 2021',
-        title: 'Why Is Skin Surgeon Considered Underrated',
-      },
-    ];
+
+if (loading) {
+  // Handle loading state
+  return (
+    <div className='d-flex justify-content-center align-items-center mt-5 py-5'>
+      <PropagateLoader color="#36d7b7"></PropagateLoader>
+    </div>
+  );
+}
+
+if (error || data.length === 0) {
+ 
+  return null;
+}
 
   return (
     <>
-        <div className='news'>
+        <div className='news mb-3 pb-3'>
         <div className='container'>
-          <div className='titlemain'>
+          <div className='titlemain p-0'>
               <TitleBasic title = 'Latest News'/>
-              <h2>Our Latest News</h2>
+              <h2>Our Latest partners</h2>
           </div>
-          <div className='row'>
+          <div className='row  p-0'>
                 <Slider {...settings}>
-                  {boxesData.map((box, index) => (
+                  {data.data.map((item, index) => (
                     <ItemNews
                       key={index}
-                      image={box.image}
-                      imgperson={box.imgperson}
-                      nameperson={box.nameperson}
-                      date={box.date}
-                      title={box.title}
+                      image={item.logo}
+                      description={item.description}
+                      date={item.date}
+                      title={item.name}
+                      link={item.link}
                     />
                     ))}
                 </Slider>

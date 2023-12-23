@@ -19,7 +19,7 @@ const AboutUs = () => {
       <Navbar />
       <Banner title="About Us"/>
       <Aboutus />
-      <BoxNumber />
+    
       <Doctor />
       <Testimonial />
       <News />

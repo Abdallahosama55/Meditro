@@ -48,7 +48,7 @@ ul{
   margin-left: auto;
 }
 .about .boxtext h2{
-  color: #1f2278;
+  color: #237c6b;
   font-weight: 700;
 }
 .about .boxtext p{
@@ -91,20 +91,20 @@ ul{
   transition: transform 0.3s ease-in-out;
 }
 .about .boxtext .icons span{
-  color: #1f2278;
+  color: #36d7b7;
   font-size: 16px;
   font-weight: 600;
   margin: 0;
 }
 .about button{
-  background-color: #565acf;
+  background-color: #20695b;
   color: #fff;
   margin-top: 20px;
   padding: 7px 15px;
   font-weight: 500;
 }
 .about button:hover{
-  background-color: #2d31b5;
+  background-color: #36d7b7;
   color: #fff;
 }
 .about .img01{
@@ -164,4 +164,31 @@ ul{
   100% {
     transform: translateX(0);
   }
+}
+
+
+/* Aboutus.css */
+/* ... your existing CSS ... */
+
+/* Style the overlay when the modal is open */
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style the modal content */
+.ReactModal__Content {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Style the overlay when the modal is open */
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+/* Style the modal content when the modal is open */
+.ReactModal__Content--after-open {
+  opacity: 1;
 }

@@ -6,10 +6,24 @@ a{
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2) !important;
 }
 nav{
-  background-color: #f7f7ff;
+  background-color: #f6f6f6;
   width: 100%;
   border-radius: 0 !important;
   position: fixed;
+}
+.Logo-fit{
+  background-image: url('../../assets/Images/logo.png');
+  background-size: cover; /* You can use 'cover' or other options depending on your design */
+  background-repeat: no-repeat;
+  width: 200px; /* Adjust the width and height as needed */
+  height: 150px;
+  display: flex;
+justify-content: center;
+align-items: center;
+  text-indent: -9999px; /* Hide the text */
+  background-position: center; /* Center the image */
+  padding: 0px !important;
+  margin-top:-50px !important ;
 }
 @media (max-width: 991px) {
   nav .navbar-nav{
@@ -21,10 +35,10 @@ nav .navbar-nav .my-link{
   border-width: 0 0 0 1px;
   color: var(--color-basic);
   cursor: pointer;
-  display: inline-block;
+
   font-size: 18px;
   font-weight: 500;
-  padding: 15px 0px;
+  padding: 0px 0px;
   transition: 0.3s ease-in-out;
   text-decoration: none;
   margin: 0 10px;
@@ -32,6 +46,7 @@ nav .navbar-nav .my-link{
 nav .navbar-nav .nav-link,
 nav .navbar-nav .nav-item{
   display: flex;
+  padding: 0px;
   align-items: center;
 }
 @media (max-width: 991px) {

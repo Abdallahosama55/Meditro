@@ -1,53 +1,62 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.css'
 import Aboutus from './AboutUs/Aboutus'
+
 import Works from './works/works'
 import BookAppointment from './BookAppointment/BookAppointment'
+import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import Services from './Services/Services'
 import Testimonial from './Testimonial/Testimonial'
 import News from './News/News'
 import Navbar from '../../Components/Nav/Navbar';
 import Footer from '../../Components/Footer/Footer'
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop '
-
-
+import Categories from './Categories/Categories';
+import Slider from "react-slick";
+import { useState } from 'react'
 import ImgPerson from '../../assets/Images/logo.png'
 import bgimg01 from '../../assets/Images/bg01.png'
 import bgimg02 from '../../assets/Images/bg02.png'
 import bgimg03 from '../../assets/Images/bg03.png'
 import bgimg04 from '../../assets/Images/bg04.png'
-
+import bgimg05 from'../../assets/Images/about03.jpg'
+import { Container } from 'react-bootstrap';
+import BannerAds from './BannerAds/BannerAds'
 
 const Home = () => {
+  const [backgroundImagee, setBackgroundImage] = useState(bgimg05);
+
+
+
+
   return (
     <>
       <Navbar />
-      <div className='header'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-7 col-md-6 col-sm-7'>
-              <h6>We Provide All Health Care Solution</h6>
-              <h1>Protect Your Health And Take Care To Of Your Health</h1>
-              <a href='/#' className='btn-read'>Read More</a>
-            </div>
-            <div className='col-lg-5 col-md-6 col-sm-5'>
-              <img src={ImgPerson} alt='Img' className='img-fluid img-vertical-move header-logo'/>
-            </div>
-          </div>
-          <div className='img-bg'>
-            <img src={bgimg01} alt='img' className='img01'/>
-            <img src={bgimg02} alt='img' className='img02'/>
-            <img src={bgimg03} alt='img' className='img03'/>
-            <img src={bgimg04} alt='img' className='img04'/>
-          </div>
-        </div>
+      
+  <BannerAds/>
+       
+      <Container className='mt-3 gy-4'>
+      <div className='mt-3 gy-4'>
+      <Categories/>
+      <div className='mt-5'>
+  
+  
+      
+      
       </div>
+   
+      </div>
+      
+      
+      </Container>
+     
       <Aboutus />
       <Works />
       <BookAppointment />
-      <Services />
+      <Services/>
       <Testimonial />
-      <News />
+   
       <Footer />
       <ScrollToTop />
     </>

@@ -84,7 +84,7 @@ const Blog = () => {
   return (
     <>
       <Navbar />
-      <Banner  title="Blog Grid 3"/>
+      <Banner  title="Our Blog"/>
       <div className='secblog'>
         <div className='container'>
           <div className='row'>

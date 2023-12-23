@@ -1,0 +1,38 @@
+
+  .slider.slick-arrow .slick-prev{
+display: none !important;
+color: aliceblue;
+  }
+  .slider.slick-arrow .slick-next{
+    display: none !important;
+    color: aliceblue;
+      }
+
+h1{
+    color: #299c87 !important;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+
+@media (min-width: 992px) {
+    .banner-text{
+
+        margin-top: 14% !important;
+
+    }
+
+  }
+  
+  /* Medium screens (md) */
+  @media (min-width: 768px) {
+    .banner-text{
+
+        margin-top: 14% !important;
+
+    }
+
+  }

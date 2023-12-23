@@ -4,7 +4,7 @@ import './Social.css'
 import { Link } from 'react-router-dom';
 
 
-const Social = () => {
+const Social = (props) => {
 
   const TwitterIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -22,12 +22,18 @@ const Social = () => {
     </svg>
   );
 
+  const FacebookIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+  );
+
   return (
     <>
       <div className='social'>
-        <Link to="#/"><TwitterIcon /></Link>
-        <Link to="#/"><LinkedinIcon /></Link>
-        <Link to="#/"><InstagramIcon /></Link>
+      
+      {props.iconTwitter && <Link to={props.iconTwitter}><TwitterIcon /></Link>}
+      {props.iconLinkedin && <Link to={props.iconLinkedin}><LinkedinIcon /></Link>}
+      {props.iconInstagram && <Link to={props.iconInstagram}><InstagramIcon /></Link>}
+      {props.iconFacebook && <Link to={props.iconFacebook}><FacebookIcon /></Link>}
       </div>
     </>
   )

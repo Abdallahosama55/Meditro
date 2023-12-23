@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './ContactUs.css'
 import ItemContactUs from './ItemContactUs/ItemContactUs'
 import Banner from '../../Components/Banner/Banner'
@@ -6,17 +5,74 @@ import Social from '../../Components/Social/Social';
 import Navbar from '../../Components/Nav/Navbar';
 import Footer from '../../Components/Footer/Footer';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop ';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapLocationDot, faEnvelopeOpenText, faGlobe} from '@fortawesome/free-solid-svg-icons'
-
-
 import ImgCont1 from '../../assets/Images/cont01.png'
 import ImgCont2 from '../../assets/Images/cont02.png'
 import ImgCont3 from '../../assets/Images/cont03.png'
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useFormik } from 'formik';
+import {
+  fetchData,
+  fetchDataSuccess,
+  fetchDataStart,
+  fetchDataFailure,
+} from '../../Redux/ReduxContactus/apiSlice';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'; // Import SweetAlert2 React Content
+import { unwrapResult } from '@reduxjs/toolkit';
 
+
+const MySwal = withReactContent(Swal); 
 
 const ContactUs = () => {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.apicontact_us.data);
+  const loading = useSelector((state) => state.apicontact_us.loading);
+  const error = useSelector((state) => state.apicontact_us.error);
+  const [formattedDateTime, setFormattedDateTime] = useState('');
+
+  useEffect(() => {
+    dispatch(fetchDataStart());
+    dispatch(fetchData())
+      .then(unwrapResult)
+      .then((data) => {
+        dispatch(fetchDataSuccess(data));
+      })
+      .catch((error) => {
+        dispatch(fetchDataFailure(error.message));
+      });
+  }, [dispatch]);
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      phone:'',
+      email: '',
+      message: '',
+     
+    },
+    onSubmit: async (values) => {
+      // Ensure the date field is set to the formatted date
+      values.date = formattedDateTime;
+
+      try {
+        const response = await dispatch(fetchData(values)); // Dispatch your Redux action with the form data
+
+        MySwal.fire({
+          icon: 'success',
+          title: data.message || 'Data Sent Successfully!',
+          text: 'Thank you for your submission.',
+        });
+      } catch (error) {
+        MySwal.fire({
+          icon: 'error',
+          title: data.message ||'Data Submission Failed',
+          text: 'There was an error while submitting the data. Please try again later.',
+        });
+      }
+    },
+  });
 
   const boxesData = [
     {
@@ -58,44 +114,44 @@ const ContactUs = () => {
           <div className='cous-form'>
             <div className='row'>
               <div className='col-lg-5'>
+              <h1>ContactUs</h1>
                 <div className='box boxform'>
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={formik.handleSubmit}>
                     <input
                       type="text"
                       placeholder='Your Name'
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      name='name'
+                      value={formik.values.name}
+                     onChange={formik.handleChange}
+                  
                       required
                     />
                     <input
                       type="email"
                       placeholder='Email'
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      name='email'
+                     
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                      
                       required
                     />
                     <input
-                      type="number"
+                      type="tel"
+                      name='phone'
                       placeholder='Phone Numbers'
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      value={formik.values.phone}
+                      onChange={formik.handleChange}
                       required
+                    
                     />
-                    <select
-                      id="selectOption"
-                      name="option"
-                      value={department}
-                      onChange={(e) => setDepartment(e.target.value)}
-                    >
-                      <option value="option1">Select Department</option>
-                      <option value="option2">One</option>
-                      <option value="option3">Two</option>
-                      <option value="option4">Three</option>
-                    </select>
+             
                     <textarea
                       placeholder='Type Message'
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
+                      name='message'
+                      value={formik.values.message}
+                      onChange={formik.handleChange}
+                      required
                     ></textarea>
                     <button type="submit" className='btn btnsubmit'>Submit</button>
                   </form>

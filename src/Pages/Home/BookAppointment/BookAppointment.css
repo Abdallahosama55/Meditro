@@ -28,7 +28,7 @@
 .appointment .boxform form{
   padding: 30px 0 0 0;
 }
-.appointment .boxform form input,
+.appointment .boxform form input,textarea,
 .appointment .boxform form select{
   border: 1px solid rgba(86,90,207,.3);
   border-radius: 8px;

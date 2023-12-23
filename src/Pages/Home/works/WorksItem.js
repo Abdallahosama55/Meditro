@@ -9,9 +9,9 @@ const WorksItem = (props) => {
       <div className='col-lg-4 col-md-6 col-sm-12'>
         <div className='box'>
           <h2 className='number'>{props.number}</h2>
-          <h3>{props.title}</h3>
+          <h3>Price Plane  {props.title+1}</h3>
           <p>{props.description}</p>
-          <MainButton buttonText="View More"/>
+      
         </div>
       </div>  
     </>

@@ -49,7 +49,7 @@ const Services = () => {
   return (
     <>
       <Navbar />
-      <Banner title="Services"/>
+      <Banner title="Products"/>
       <div className='secone'>
         <div className='container'>
           <div className='row'>

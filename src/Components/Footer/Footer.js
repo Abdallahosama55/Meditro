@@ -62,10 +62,7 @@ const Footer = () => {
             <div className='col-lg-3 col-md-6'>
               <div className='box'>
                 <h3>Subcribe</h3>
-                <form>
-                  <input placeholder='Email Address' required/>
-                  <button className='btn'>Subscribe Now</button>
-                </form>
+
                 <div className='social-media'>
                   <ul>
                     <li><a href='#/'><img src={Facebook} alt='Facebook'/></a></li>
@@ -78,7 +75,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='Copyright'>
-            <p>Copyright © 2023 Design & Developed by <a href='https://doctor-code.net/'>Dr code</a></p>
+            <p>Copyright © 2023 Design & Developed by <a href='https://abdallahosama55.github.io/Abdallah-Osama-portfolio/#/'>Abdallah Osama</a></p>
           </div>
           <div className='img-bg'>
             <img src={Motion01} alt='img' className='img01'/>

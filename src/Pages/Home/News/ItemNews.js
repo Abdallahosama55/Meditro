@@ -5,23 +5,22 @@ import MainButton from '../../../Components/MainButton/MainButton'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 
 const ItemNews = (props) => {
   return (
     <>
-      <div className='col-lg-12'>
+      <div className='col-lg-11 '>
         <div className='box'>
           <div className='itemnews'>
-            <img src={props.image} alt='img' className='img-fluid image01'/>
-            <div className='namedate'>
-              <img src={props.imgperson} alt='img' className='img-fluid imgperson'/>
-              <h6>{props.nameperson}</h6>
-              <FontAwesomeIcon icon={faCalendarDays} />
-              <span className='date'>{props.date}</span>
-            </div>
+            <img src={props.image} alt='img' className='img-fluid image01 w-100 p-3'/>
             <h5 className='title'>{props.title}</h5>
+            <p className=' text-muted'>{props.description}</p>
+        
+            <a href={props.link}>
             <MainButton buttonText="Read More"/>
+            </a>
           </div>
         </div>
       </div>
